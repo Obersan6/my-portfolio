@@ -1,0 +1,18 @@
+@import "tailwindcss";
+/* @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Dancing+Script:wght@400;700&family=Open+Sans:wght@400;600;700&family=Sacramento&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Dancing+Script:wght@400;700&family=Montserrat&family=Open+Sans:wght@400;600;700&family=Sacramento&display=swap');
+
+
+body {
+    background-color: #EAFDFC;   
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.nav-link {
+    color: #3AA6B9;
+}
+.nav-link:hover {
+    color:#27374a;
+}
