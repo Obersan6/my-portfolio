@@ -12,7 +12,10 @@ body {
 
 .nav-link {
     color: #3AA6B9;
+    color: #0a89a0;
+    color: #077488;
+    
 }
 .nav-link:hover {
-    color:#27374a;
+    color:#083265;
 }

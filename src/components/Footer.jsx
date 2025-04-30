@@ -7,10 +7,10 @@ function Footer() {
     <footer className="bg-[#91D8E4] py-6 text-center mt-20">
       <div className="flex justify-center space-x-6 mb-4">
         <a href="https://www.linkedin.com/in/your-linkedin-here" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-linkedin text-2xl text-[#3AA6B9] hover:text-[#27374a]"></i>
+          <i className="fab fa-linkedin text-2xl text-[#0A66C2] hover:text-[#3AA6B9]"></i>
         </a>
         <a href="https://github.com/your-github-here" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-github text-2xl text-[#3AA6B9] hover:text-[#27374a]"></i>
+          <i className="fab fa-github text-2xl text-[#181717] hover:text-[#3AA6B9]"></i>
         </a>
       </div>
       <p className="text-sm text-[#27374a]">© 2025 Olga Bernal. All rights reserved.</p>

@@ -5,12 +5,12 @@ import React from 'react';
 
 function Skills() {
     return (
-      <section id="skills" className="bg-[#EAFDFC] py-16 text-center">
-            <h2 className="text-[50px] font-['Montserrat'] text-[#3AA6B9] mt-10">Skills</h2>
+      <section id="skills" className="bg-[#EAFDFC] pt-25 pb-40 text-center">
+            <h2 className="text-[50px] font-['Montserrat'] text-[#077488] ">Skills</h2>
 
           {/* Frontend */}
-          <div className="mb-12 mt-10">
-            <h3 className="text-2xl font-semibold font-['Comfortaa'] text-[#27374a] mb-6">Frontend</h3>
+          <div className="mt-30 mb-14">
+            <h3 className="text-2xl font-semibold font-['Comfortaa'] text-[#27374a] mb-10">Frontend</h3>
             <div className="flex flex-wrap justify-center gap-10">
               {[
                 ['devicon-javascript-plain', 'JavaScript', 'devicon'],
@@ -35,7 +35,7 @@ function Skills() {
 
           {/* Backend */}
           <div className="mb-12">
-            <h3 className="text-2xl font-semibold font-['Comfortaa'] text-[#27374a] mb-6">Backend</h3>
+            <h3 className="text-2xl font-semibold font-['Comfortaa'] text-[#27374a] mb-10">Backend</h3>
             <div className="flex flex-wrap justify-center gap-10">
               {[
                 ['devicon-python-plain', 'Python', 'devicon'],
@@ -60,7 +60,7 @@ function Skills() {
             
           {/* Tools & Methods */}
           <div>
-            <h3 className="text-2xl font-semibold font-['Comfortaa'] text-[#27374a] mb-6">Tools & Methods</h3>
+            <h3 className="text-2xl font-semibold font-['Comfortaa'] text-[#27374a] mb-10">Tools & Methods</h3>
             <div className="flex flex-wrap justify-center gap-10">
               {[
                 ['devicon-git-plain', 'Git', 'devicon'],

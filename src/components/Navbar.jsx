@@ -1,5 +1,7 @@
 /* NavBar Component */
 
+/* NavBar Component */
+
 import React, { useState , useEffect } from 'react';
 
 
@@ -36,12 +38,23 @@ function Navbar() {
     return (
         <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ease-in-out bg-[#91D8E4] shadow-md ${isShrunk ? 'py-2' : 'py-12'}`}>
 
-            <div className="max-w-screen-xl mx-auto px-4 flex flex-col items-center justify-between">
+            <div className="max-w-screen-xl mx-auto px-4 flex flex-col items-center justify-between relative">
+              
+              {/* Social Icons - top-right corner */}
+              <div className="absolute top-4 right-4 flex space-x-4">
+                <a className="text-[#0A66C2] hover:text-[#3AA6B9]" href="https://www.linkedin.com/in/olga-bernal/" target="_blank" rel="noopener noreferrer">
+                  <i className="fab fa-linkedin text-3xl text-[#0A66C2] hover:text-[#3AA6B9]"></i> LinkedIn
+                </a>
+                <a className="text-[#181717] hover:text-[#3AA6B9]" href="https://github.com/Obersan6" target="_blank" rel="noopener noreferrer">
+                  <i className="fab fa-github text-3xl text-[#181717] hover:text-[#3AA6B9]"></i> GitHub
+                </a>
+              </div>
+
 
                 {/* Brand Name */}
                 <a
                     href="#home"
-                    className={`font-['Sacramento']  text-[#3AA6B9] hover:text-[#27374a] font-bold transition-colors duration-300 nav-link ${
+                    className={`font-['Sacramento'] text-[#3AA6B9] hover:text-[#27464a] font-bold transition-colors duration-300 nav-link ${
                     isShrunk ? 'text-[40px]' : 'text-[60px]'}`}
                 >                
                     Olga Bernal
@@ -94,17 +107,7 @@ function Navbar() {
                       Contact
                     </a>
                   </li>
-                </ul>
-
-                {/* LinkedIn and GitHub */}
-                <div clasName="flex space-x-4 mt-4">
-                  <a href="https://www.linkedin.com/in/olga-bernal/" target="_blank" rel="noopener noreferrer">
-                    <i className="fab fa-linkedin text-3xl text-[#3AA6B9] hover:text-[#27374a]"></i>
-                  </a>
-                  <a href="https://github.com/Obersan6" target="_blank rel=noopener noreferrer">
-                    <i className="fab fa-github text-3xl text-[#3AA6B9] hover:text-[#27374a]"></i>
-                  </a>
-                </div>
+                </ul>               
             </div>
         </nav>
     )

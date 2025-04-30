@@ -5,8 +5,9 @@ import ProjectCard from './ProjectCard';
 
 function Projects() {
     return (
-        <section id="projects" className="bg-[#b3e0ee] py-16 text-center">
-            <h2 className="text-[50px] font-['Montserrat'] text-[#3AA6B9] mt-12">Projects</h2>
+        // <section id="projects" className="bg-[#b3e0ee] py-16 text-center">
+        <section id="projects" className="bg-[#afe3f2] py-16 text-center">
+            <h2 className="text-[50px] font-['Montserrat'] text-[#077488] mt-12">Projects</h2>
 
             {/* Main Projects */}
             <div className="space-y-16 mb-20">
@@ -36,7 +37,7 @@ function Projects() {
             </div>
 
             {/* Other Projects */}
-            <h2 className="text-[50px] font-['Montserrat'] text-[#3AA6B9] mt-4">Other Projects</h2>
+            <h2 className="text-[50px] font-['Montserrat'] text-[#077488] mt-4">Other Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {/* Small/Other projects */}
                 <ProjectCard

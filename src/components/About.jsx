@@ -4,13 +4,15 @@ import React from 'react';
 
 function About() {
     return (
-        <section id="about" className="bg-[#b3e0ee] py-16 text-center">
-            <h2 className="text-[50px] font-['Montserrat'] text-[#3AA6B9] mt-4">About Me</h2>
+        // <section id="about" className="bg-[#b3e0ee] pt-25 pb-40 text-center">
+        <section id="about" className="bg-[#afe3f2] pt-25 pb-40 text-center">
 
-            <p className="mt-6 text-lg px-6 max-w-6xl mx-auto text-[25px] font-['Comfortaa'] text-[#1b3944] leading-relaxed">
-            Hi there! I'm a <span className="font-bold text-[#3AA6B9]">software developer</span>. I’m particularly interested in creating educational tools and solutions for various fields—especially in areas like education, research, health, science, and even the food industry.
-            <br /><br />
-            Before transitioning into tech, I managed international literary talent in film and TV, working closely with award-winning creatives. That experience taught me how to lead complex projects, collaborate across disciplines, and stay adaptable—skills I now bring into software development.
+            <h2 className="text-[50px] font-['Montserrat'] text-[#077488]">About Me</h2>
+  
+            <p className="mt-16 text-lg px-6 max-w-6xl mx-auto text-[28px] font-['Comfortaa'] text-[#27464a] leading-relaxed">
+            {/* 👋 Hi there!  */}
+            <br /> 
+            I’m a <span className="font-bold text-[#077488]">full-stack software developer</span> with a background in psychology, especially in areas like cognitive science, neuroscience, and technology. I enjoy building educational tools and meaningful products—mostly in fields like education, research, health, and well-being, but I’m open to any mission-driven project that grabs my interest.
             </p>
         </section>
     );
