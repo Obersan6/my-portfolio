@@ -7,6 +7,7 @@ function Skills() {
     return (
       <section id="skills" className="bg-[#EAFDFC] pt-25 pb-40 text-center">
             <h2 className="text-[50px] font-['Montserrat'] text-[#077488] ">Skills</h2>
+            {/* <h2 className="text-[50px] font-['italiana'] text-[#077488] ">Skills</h2> */}
 
           {/* Frontend */}
           <div className="mt-30 mb-14">

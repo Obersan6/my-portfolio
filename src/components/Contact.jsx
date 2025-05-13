@@ -48,6 +48,7 @@ function Contact() {
     <section id="contact" className="min-h-screen bg-[#EAFDFC] flex items-center justify-center px-6 py-12">
       <div className="max-w-xl w-full text-center">
         <h2 className="text-[40px] font-['Comfortaa'] text-[#077488] mb-6">Get in Touch</h2>
+        {/* <h2 className="text-[40px] font-['italiana'] text-[#077488] mb-6">Get in Touch</h2> */}
 
         {submitted ? (
           <p className="text-green-600 text-lg">

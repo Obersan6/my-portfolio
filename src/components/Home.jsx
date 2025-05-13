@@ -17,7 +17,7 @@ function Home() {
             <h2 className="text-[60px] font-['Sacramento'] text-[#3AA6B9] mt-4">
             {/* <h2 className="text-[60px] font-['Sacramento'] text-[#077488] mt-4"> */}
                 Hi, I'm a Software Developer 
-            </h2>"
+            </h2>
         </section>
     );
 }
