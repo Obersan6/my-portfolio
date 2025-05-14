@@ -1,7 +1,5 @@
 /* NavBar Component */
 
-/* NavBar Component */
-
 import React, { useState , useEffect } from 'react';
 
 
@@ -59,9 +57,6 @@ function Navbar() {
                 >                
                     Olga Bernal
                 </a>
-                {/* <h1 className="text-[60px] text-[#3AA6B9] font-['Sacramento'] font-bold">
-                Olga Bernal
-                </h1> */}
 
                 {/* Hamburger Menu Button (Visible on Small Screens) */}
                 <div className="md:hidden mt-4">

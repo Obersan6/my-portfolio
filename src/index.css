@@ -19,3 +19,12 @@ body {
 .nav-link:hover {
     color:#083265;
 }
+
+.contact-button {
+    background-color: #3AA6B9;
+    color: #ffff;
+}
+
+.contact-button:hover {
+    background-color:#097b8d;
+}

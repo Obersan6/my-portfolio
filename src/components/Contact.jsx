@@ -45,13 +45,14 @@ function Contact() {
   };
 
   return (
+    // <section id="contact" className="min-h-screen bg-[#EAFDFC] flex items-center justify-center px-6 py-12">
     <section id="contact" className="min-h-screen bg-[#EAFDFC] flex items-center justify-center px-6 py-12">
       <div className="max-w-xl w-full text-center">
-        <h2 className="text-[40px] font-['Comfortaa'] text-[#077488] mb-6">Get in Touch</h2>
+        <h2 className="text-[50px] font-['Montserrat'] text-[#077488] pt-15 pb-25">Get in Touch</h2>
         {/* <h2 className="text-[40px] font-['italiana'] text-[#077488] mb-6">Get in Touch</h2> */}
 
         {submitted ? (
-          <p className="text-green-600 text-lg">
+          <p className="text-green-600 text-lg font-['comfortaa']">
             ✅ Thank you! Your message was sent successfully.
           </p>
         ) : (
@@ -63,7 +64,7 @@ function Contact() {
               onChange={handleChange}
               placeholder="Your name"
               required
-              className="w-full px-4 py-2 border-2 border-[#91D8E4] rounded-md focus:ring-2 focus:ring-[#3AA6B9]"
+              className="w-full px-4 py-2 border-2 border-[#3AA6B9] rounded-md focus:ring-2 focus:ring-[#3AA6B9] font-['comfortaa']"
             />
             <input
               type="email"
@@ -72,7 +73,7 @@ function Contact() {
               onChange={handleChange}
               placeholder="Your email"
               required
-              className="w-full px-4 py-2 border-2 border-[#91D8E4] rounded-md focus:ring-2 focus:ring-[#3AA6B9]"
+              className="w-full px-4 py-2 border-2 border-[#3AA6B9] rounded-md focus:ring-2 focus:ring-[#3AA6B9] font-['comfortaa']"
             />
             <textarea
               name="message"
@@ -81,12 +82,12 @@ function Contact() {
               placeholder="Your message"
               rows="5"
               required
-              className="w-full px-4 py-2 border-2 border-[#91D8E4] rounded-md focus:ring-2 focus:ring-[#3AA6B9]"
+              className="w-full px-4 py-2 border-2 border-[#3AA6B9] rounded-md focus:ring-2 focus:ring-[#3AA6B9] font-['comfortaa']"
             ></textarea>
 
             <button
               type="submit"
-              className="w-full bg-[#3AA6B9] hover:bg-[#27374a] text-white font-medium py-2 px-4 rounded transition-colors duration-300"
+              className="w-full bg-[#3AA6B9] hover:bg-[#27374a] font-['comfortaa'] text-white font-medium py-2 px-4 rounded transition-colors duration-300 contact-button"
             >
               Send Message
             </button>
@@ -94,10 +95,10 @@ function Contact() {
         )}
 
         {/* Optional backup email */}
-        <p className="text-sm text-gray-500 mt-6">
+        <p className="text-sm text-gray-500 mt-6 font-['comfortaa'] text-[18px]">
           Prefer email? Reach me directly at{" "}
-          <a href="mailto:your.email@example.com" className="text-blue-600 hover:text-blue-800">
-            obersan6@example.com
+          <a href="mailto:your.email@example.com" className="font-['comfortaa'] text-blue-600 hover:text-blue-800">
+            obersan6@gmail.com
           </a>
         </p>
       </div>

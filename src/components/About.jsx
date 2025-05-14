@@ -30,4 +30,3 @@ function About() {
 export default About;
 
 
-// text color for About background color --> bg-[#b3e0ee]

@@ -119,11 +119,10 @@ function Projects() {
             </div>
 
             {/* Other Projects */}
-            <h2 className="text-[50px] font-['Montserrat'] text-[#077488] mt-4">Other Projects</h2>
-            {/* <h2 className="text-[50px] font-['italiana'] text-[#077488] mt-4">Other Projects</h2> */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {/* <h2 className="text-[50px] font-['Montserrat'] text-[#077488] mt-4">Other Projects</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"> */}
                 {/* Small/Other projects */}
-                <ProjectCard
+                {/* <ProjectCard
                   title="Weather App"
                   description="A simple weather dashboard using OpenWeather API."
                   techStack={['JavaScript', 'HTML', 'CSS']}
@@ -136,9 +135,9 @@ function Projects() {
                   techStack={['React']}
                   githubLink="#"
                   isFeatured={false}
-                />
+                /> */}
                 {/* Add many more */}
-            </div>
+            {/* </div> */}
         </section>
     );
 }
