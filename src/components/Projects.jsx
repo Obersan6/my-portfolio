@@ -34,7 +34,7 @@ function Projects() {
                   }
                   generalFeatures={
                     <>
-                      Full-stack application, features a <strong><em>custom API</em></strong>, <strong><em>over 30 routes</em></strong>, responsive design, user authentication, search functionality with autocomplete, and dynamic content.
+                      <strong><em>Full-stack application</em></strong>, features a <strong><em>custom API</em></strong>, <strong><em>over 30 routes</em></strong>, responsive design, user authentication, search functionality with autocomplete, and dynamic content.
                     </>
                   }
                   techStack={['Python', 'Flask', 'PostgreSQL', 'JavaScript', 'html', 'css', 'Bootstrap']}
@@ -49,7 +49,11 @@ function Projects() {
               <div className="flex justify-center mt-20 mb-14">
                 <ProjectCard
                   title="AdoptaPet"
-                  description="A full-stack application that helps users find adoptable dogs across the U.S. "
+                  description={
+                    <>
+                      <strong><em>A full-stack application</em></strong> that helps users find adoptable dogs across the U.S. 
+                    </>
+                  }
                   generalFeatures={
                     <>
                       Secure authentication, real-time dog listings via the <strong><em>Petfinder API</em></strong>, search by breed or location, and a fully responsive design.
@@ -66,8 +70,12 @@ function Projects() {
               <div className="flex justify-center mt-20 mb-14">
                 <ProjectCard
                   title="Jobly"
-                  description="A job board application built using React and a provided Express.js backend API. Users can browse companies and job listings, apply for jobs, and manage their profiles through a secure, responsive interface. "
-                  generalFeatures="Full-stack application (frontend focus), integrates with a prebuilt RESTful API, secure user authentication with JWT, PostgreSQL data handling, protected routes and forms, job application tracking, and design using React and Bootstrap."
+                  description="A job board application built using React and a provided Express.js backend API. Users can browse companies and job listings, apply for jobs, and manage their profiles through a secure interface."
+                  generalFeatures={
+                    <>
+                      <strong><em>Full-stack application</em></strong> (frontend focus), integrates with a prebuilt RESTful API, secure user authentication with JWT, PostgreSQL data handling, protected routes and forms, job application tracking, and design using React and Bootstrap.
+                    </>
+                  }
                   techStack={['React', 'Express', 'PostgreSQL', 'JWT', 'css', 'Bootstrap']}
                   note="🔔 App may take a moment to load (free hosting)."
                   githubLink="https://github.com/Obersan6/react-jobly-frontend"
@@ -80,8 +88,16 @@ function Projects() {
               <div className="flex justify-center mt-20 mb-14">
                 <ProjectCard
                   title="Boggle Game"
-                  description="A browser-based word game where users form words from a randomized letter grid. The app checks word validity, tracks scores, and provides live feedback — all powered by Flask and JavaScript."
-                  generalFeatures="Interactive game interface with real-time word validation, AJAX requests using Axios, backend logic in Flask, session-based score tracking, client-side timer, and responsive UI. Includes backend routes for scoring, validation, and game state, as well as JSON-based communication between client and server."
+                  description={
+                    <>
+                      A browser-based word game where users form words from a randomized letter grid. The app checks word validity, tracks scores, and provides live feedback — <strong><em>all powered by Flask and JavaScript</em></strong>.
+                    </>
+                  }
+                  generalFeatures={
+                    <>
+                      <strong><em>Lightweight full-stack application</em></strong> interactive game interface with real-time word validation, <strong><em>AJAX requests using Axios</em></strong>, <strong><em>backend logic in Flask</em></strong>, session-based score tracking, client-side timer, and responsive UI. Includes backend routes for scoring, validation, and game state, as well as JSON-based communication between client and server.
+                    </>
+                  }
                   techStack={['Python', 'Flask', 'JavaScript', 'html', 'css']}
                   githubLink="https://github.com/Obersan6/flask-boggle"
                   videoLink="https://youtu.be/uB6AyBCDPBA"
@@ -93,7 +109,11 @@ function Projects() {
               <div className="flex justify-center mt-20 mb-14">
                 <ProjectCard
                   title="To-Do List"
-                  description="A simple, responsive to-do list app built with vanilla JavaScript. Users can add, delete, and persist tasks across sessions using localStorage."
+                  description={
+                    <>
+                      A simple, responsive to-do list app built with vanilla JavaScript. Users can add, delete, and <strong><em>persist tasks across sessions using localStorage</em></strong>.
+                    </>
+                  }
                   generalFeatures="Frontend-only application with dynamic DOM manipulation, real-time task updates, localStorage persistence, form validation, and clean responsive design using CSS and Bootstrap."
                   techStack={['JavaScript', 'HTML', 'CSS', 'Bootstrap']}
                   githubLink="https://github.com/Obersan6/To-Do-List"
@@ -108,7 +128,7 @@ function Projects() {
                   title="Draw a Deck"
                   description={
                     <>
-                      A dynamic card-drawing app built with React and the <strong><em>Deck of Cards API</em></strong>. Users can draw cards one by one from a shuffled deck, watch them appear in real time, and reset the deck at any time.
+                      A dynamic card-drawing app built with <strong><em>React</em></strong> and the <strong><em>Deck of Cards API</em></strong>. Users can draw cards one by one from a shuffled deck, watch them appear in real time, and reset the deck at any time.
                     </>
                   }
                   generalFeatures="Frontend-only application with API integration, real-time rendering using useEffect and useState, automated intervals for card drawing, conditional rendering, and smooth user interaction through React components."

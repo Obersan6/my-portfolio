@@ -1,12 +1,49 @@
-# React + Vite
+# 🌐 Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal portfolio website, built to showcase my software engineering projects, technical skills, and background. It includes live previews, GitHub links, and video demos for each project.
 
-Currently, two official plugins are available:
+📍 Deployed at: [My Portfolio Website](https://obersan6.github.io/my-portfolio/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Clean, responsive design using **Tailwind CSS**
+- Project cards with:
+  - 📸 Image thumbnails
+  - 📄 Descriptions & tech stack
+  - 🔗 Links to GitHub, live demos, and video walkthroughs
+- Fully responsive layout for mobile and desktop
+- Easily extendable and maintainable structure
+
+---
+
+## 🛠️ Tech Stack
+
+- **React**
+- **Vite**
+- **Tailwind CSS**
+- **FontAwesome** + **Devicon**
+- Deployed via **GitHub Pages**
+
+---
+
+## 🚀 Projects Included
+
+- **PsychoDiagnose** — Full-stack *DSM-5-TR based* diagnostic tool.
+- **AdoptaDog** — Full-stack dog adoption platform.
+- **Jobly** — Full-stack job board application.
+- **Boggle Game** — Lightweight full-stack application, browser-based word game.
+- **To-Do List** — A simple, responsive to-do list app built with vanilla JavaScript, localStorage persistent.
+- **Deck of Cards** — A dynamic card-drawing app built with React.
+
+> Note: Some GitHub repos may be private during active development. Recruiters or collaborators can request access.
+
+---
+
+🧠 About Me
+I’m a full-stack software developer with a background in education, psychology, and research. I build tools that combine technology with real-world impact.
+
+📫 Contact
+Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/olga-bernal/)
+Or reach out by email: obersan6@gmail.com
