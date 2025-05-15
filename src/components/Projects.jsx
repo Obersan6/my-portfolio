@@ -25,6 +25,10 @@ function Projects() {
                   title="PsychoDiagnose"
                   description={
                     <>
+                      <p className="bg-red-100 text-red-700 p-2 rounded-md text-sm font-semibold italic mb-4">
+                      🔒 This GitHub repo is private due to active development. Access available upon request.
+                      </p>
+                      
                       An educational diagnostic tool based on the <strong><em>DSM-5-TR</em></strong>, designed to help psychology and psychiatry students learn the diagnostic process. 
                     </>
                   }

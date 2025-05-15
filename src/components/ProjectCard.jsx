@@ -9,14 +9,14 @@ function ProjectCard({ title, description, generalFeatures, techStack, githubLin
         
         {/* Thumbnail */}
         {image && (
-            <div className="lg:w-1/2 w-full flex justify-center items-center">
-              <img
-               src={image}
-               alt={`${title} screenshot`}
-               className="rounded-md shadow-md object-cover w-full h-auto max-h-[280px]"
-              />
-            </div>
-        )}     
+          <div className="lg:w-1/2 w-full flex justify-center items-center">
+            <img
+              src={image}
+              alt={`${title} screenshot`}
+              className="rounded-md shadow-md object-cover w-full h-auto max-h-[280px]"
+            />
+          </div>
+        )}   
 
         {/* Content */}
         <div className="flex-1" text-left>
