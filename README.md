@@ -37,7 +37,7 @@ This is my personal portfolio website, built to showcase my software engineering
 - **To-Do List** — A simple, responsive to-do list app built with vanilla JavaScript, localStorage persistent.
 - **Deck of Cards** — A dynamic card-drawing app built with React.
 
-> Note: Some GitHub repos may be private during active development. Recruiters or collaborators can request access.
+> **Note**: Some GitHub repos may be private during active development. Recruiters or collaborators can request access.
 
 ---
 
