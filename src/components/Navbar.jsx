@@ -40,22 +40,46 @@ function Navbar() {
               
               {/* Social Icons - top-right corner */}
               <div className="absolute top-4 right-4 flex space-x-4">
-                <a className="text-[#0A66C2] hover:text-[#3AA6B9]" href="https://www.linkedin.com/in/olga-bernal/" target="_blank" rel="noopener noreferrer">
-                  <i className="fab fa-linkedin text-3xl text-[#0A66C2] hover:text-[#3AA6B9]"></i> LinkedIn
+                <a className="flex items-center space-x-1 text-[#0A66C2] hover:text-[#3AA6B9] text-sm sm:text-base md:text-lg lg:text-xl href="https://www.linkedin.com/in/olga-bernal/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+                {/* <a className="text-[#0A66C2] hover:text-[#3AA6B9]" href="https://www.linkedin.com/in/olga-bernal/" target="_blank" rel="noopener noreferrer"> */}
+                  {/* <i className="fab fa-linkedin text-3xl text-[#0A66C2] hover:text-[#3AA6B9]"></i> LinkedIn
+                </a> */}
+                <i className="fab fa-linkedin text-xl sm:text-2l md:text-3xl"></i>
+                <span>LinkdeIn</span>
                 </a>
-                <a className="text-[#181717] hover:text-[#3AA6B9]" href="https://github.com/Obersan6" target="_blank" rel="noopener noreferrer">
+
+                {/* <a className="text-[#181717] hover:text-[#3AA6B9]" href="https://github.com/Obersan6" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-github text-3xl text-[#181717] hover:text-[#3AA6B9]"></i> GitHub
-                </a>
+                </a> */}
+                <a className="flex items-center space-x-1 text-[#181717] hover:text-[#3AA6B9] text-sm sm:text-base md:text-lg lg:text-xl"
+                href="https://github.com/Obersan6"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i className="fab fa-github text-xl sm:text-2xl md:text-3xl"></i>
+    <span>GitHub</span>
+    </a>
               </div>
 
 
                 {/* Brand Name */}
-                <a
+                {/* <a
                     href="#home"
                     className={`font-['Sacramento'] text-[#3AA6B9] hover:text-[#27464a] font-bold transition-colors duration-300 nav-link ${
                     isShrunk ? 'text-[40px]' : 'text-[60px]'}`}
                 >                
                     Olga Bernal
+                </a> */}
+                <a href="#home" className={`font-['Sacramento'] text-[#3AA6B9] hover:text-[#27464a] font-bold transition-colors duration-300 nav-link ${
+                isShrunk
+                  ? 'text-2xl sm:text-3xl md:text-4xl'
+                  : 'text-4xl sm:text-5xl md:text-6xl'
+                }`}
+                >
+                  Olga Bernal
                 </a>
 
                 {/* Hamburger Menu Button (Visible on Small Screens) */}
@@ -63,7 +87,7 @@ function Navbar() {
                     <button
                       onClick={() => setIsOpen(!isOpen)}
                       className="text-[#3AA6B9]
-                      focus:oultine-none"
+                      focus:outline-none"
                       aria-label="Toggle navigation"
                     >
                     
@@ -83,22 +107,57 @@ function Navbar() {
                 <ul className={`mt-4 space-y-2 md:space-y-0 md:space-x-8 md:flex ${isOpen ? 'flex flex-col items-center' : 'hidden'} md:flex`}
             >
                   <li>
-                    <a href="#about" className={`font-['Comfortaa'] text-[#3AA6B9] hover:text-[#27374a] font-bold transition-colors duration 300 nav-link ${isShrunk ? 'text-[20px]' : 'text-[25px]'}`}>
+                    {/* <a href="#about" className={`font-['Comfortaa'] text-[#3AA6B9] hover:text-[#27374a] font-bold transition-colors duration 300 nav-link ${isShrunk ? 'text-[20px]' : 'text-[25px]'}`}>
+                      About
+                    </a> */}
+                    <a href="#about" className={`font-['Comfortaa'] text-[#3AA6B9] hover:text-[#27374a] font-bold transition-colors duration-300 nav-link ${
+                      isShrunk  
+                        ? 'text-base sm:text-lg md:text-xl'
+                        : 'text-lg sm:text-xl md:text-2xl'
+                    }`}
+                    >
                       About
                     </a>
                   </li>
                   <li>
-                    <a href="#skills" className={`font-['Comfortaa'] text-[#3AA6B9] hover:text-[#27374a] font-bold transition-colors duration 300 nav-link ${isShrunk ? 'text-[20px]' : 'text-[25px]'}`}>
+                    {/* <a href="#skills" className={`font-['Comfortaa'] text-[#3AA6B9] hover:text-[#27374a] font-bold transition-colors duration 300 nav-link ${isShrunk ? 'text-[20px]' : 'text-[25px]'}`}>
+                      Skills
+                    </a> */}
+
+                    <a href="#skills" className={`font-['Comfortaa'] text-[#3AA6B9] hover:text-[#27374a] font-bold transition-colors duration 300 nav-link ${
+    isShrunk
+      ? 'text-base sm:text-lg md:text-xl'
+      : 'text-lg sm:text-xl md:text-2xl'
+  }`}
+                    >
                       Skills
                     </a>
                   </li>
                   <li>
-                    <a href="#projects" className={`font-['Comfortaa'] text-[#3AA6B9] hover:text-[#27374a] transition-colors font-bold duration 300 nav-link ${isShrunk ? 'text-[20px]' : 'text-[25px]'}`}>
+                    {/* <a href="#projects" className={`font-['Comfortaa'] text-[#3AA6B9] hover:text-[#27374a] transition-colors font-bold duration 300 nav-link ${isShrunk ? 'text-[20px]' : 'text-[25px]'}`}>
+                      Projects
+                    </a> */}
+
+                    <a href="#projects" className={`font-['Comfortaa'] text-[#3AA6B9] hover:text-[#27374a] transition-colors font-bold duration 300 nav-link ${
+                      isShrunk
+                        ? 'text-base sm:text-lg md:text-xl'
+                        : 'text-lg sm:text-xl md:text-2xl'
+                    }`}
+                    >
                       Projects
                     </a>
                   </li>
                   <li>
-                    <a href="#contact" className={`font-['Comfortaa'] text-[#3AA6B9] hover:text-[#27374a] transition-colors font-bold duration 300 nav-link ${isShrunk ? 'text-[20px]' : 'text-[25px]'}`}>
+                    {/* <a href="#contact" className={`font-['Comfortaa'] text-[#3AA6B9] hover:text-[#27374a] transition-colors font-bold duration 300 nav-link ${isShrunk ? 'text-[20px]' : 'text-[25px]'}`}>
+                      Contact
+                    </a> */}
+
+                    <a href="#contact" className={`font-['Comfortaa'] text-[#3AA6B9] hover:text-[#27374a] transition-colors font-bold duration 300 nav-link ${
+                      isShrunk
+                       ? 'text-base sm:text-lg md:text-xl'
+                       : 'text-lg sm:text-xl md:text-2xl'
+                    }`}
+                    >
                       Contact
                     </a>
                   </li>
