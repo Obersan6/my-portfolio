@@ -1,171 +1,108 @@
-/* NavBar Component */
-
-import React, { useState , useEffect } from 'react';
-
+import React, { useState, useEffect } from 'react';
 
 function Navbar() {
-    // Responsive feature
-    const [isOpen, setIsOpen] = useState(false);
-    // Shrinking navbar
-    const [isShrunk, setIsShrunk] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isShrunk, setIsShrunk] = useState(false);
 
-    // Close the mobile menu when window is resized to medium or larger screens
-    useEffect(() => {
-        const handleResize = () => {
-            if (window.innerWidth >= 768) {
-                setIsOpen(false);
-            }
-        };
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
-        window.addEventListener('resize', handleResize);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsShrunk(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-        // Cleanup the even listener on component unmount 
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
+  return (
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ease-in-out bg-[#91D8E4] shadow-md ${isShrunk ? 'py-2' : 'py-12'}`}>
+      <div className="max-w-screen-xl mx-auto px-4 relative">
 
-    // Handle scroll to shrunk/restore navbar height
-    useEffect(() => {
-      const handleScroll = () => {
-        setIsShrunk(window.scrollY > 50);
-      };
-      
-      window.addEventListener('scroll', handleScroll);
-      return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+        {/* Brand name centered */}
+        <div className="flex justify-center">
+          <a
+            href="#home"
+            className={`font-['Sacramento'] text-[#3AA6B9] hover:text-[#27464a] font-bold transition-colors duration-300 nav-link ${
+              isShrunk
+                ? 'text-2xl sm:text-3xl md:text-4xl'
+                : 'text-4xl sm:text-5xl md:text-6xl'
+            }`}
+          >
+            Olga Bernal
+          </a>
+        </div>
 
-    return (
-        <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ease-in-out bg-[#91D8E4] shadow-md ${isShrunk ? 'py-2' : 'py-12'}`}>
+        {/* Social icons — absolute on larger screens */}
+        <div className="mt-4 flex justify-center sm:justify-end sm:absolute sm:top-4 sm:right-4 space-x-4 items-center text-xs sm:text-sm md:text-base">
+          <a
+            className="flex items-center space-x-1 text-[#0A66C2] hover:text-[#3AA6B9]"
+            href="https://www.linkedin.com/in/olga-bernal/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-linkedin text-lg sm:text-xl md:text-2xl"></i>
+            <span className="hidden sm:inline">LinkedIn</span>
+          </a>
+          <a
+            className="flex items-center space-x-1 text-[#181717] hover:text-[#3AA6B9]"
+            href="https://github.com/Obersan6"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-github text-lg sm:text-xl md:text-2xl"></i>
+            <span className="hidden sm:inline">GitHub</span>
+          </a>
+        </div>
 
-            <div className="max-w-screen-xl mx-auto px-4 flex flex-col items-center justify-between relative">
-              
-              {/* Social Icons - top-right corner */}
-              <div className="absolute top-4 right-4 flex space-x-4">
-                <a className="flex items-center space-x-1 text-[#0A66C2] hover:text-[#3AA6B9] text-sm sm:text-base md:text-lg lg:text-xl href="https://www.linkedin.com/in/olga-bernal/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-                {/* <a className="text-[#0A66C2] hover:text-[#3AA6B9]" href="https://www.linkedin.com/in/olga-bernal/" target="_blank" rel="noopener noreferrer"> */}
-                  {/* <i className="fab fa-linkedin text-3xl text-[#0A66C2] hover:text-[#3AA6B9]"></i> LinkedIn
-                </a> */}
-                <i className="fab fa-linkedin text-xl sm:text-2l md:text-3xl"></i>
-                <span>LinkdeIn</span>
-                </a>
+        {/* Hamburger Button */}
+        <div className="md:hidden mt-4 flex justify-center">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-[#3AA6B9] focus:outline-none"
+            aria-label="Toggle navigation"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {isOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
 
-                {/* <a className="text-[#181717] hover:text-[#3AA6B9]" href="https://github.com/Obersan6" target="_blank" rel="noopener noreferrer">
-                  <i className="fab fa-github text-3xl text-[#181717] hover:text-[#3AA6B9]"></i> GitHub
-                </a> */}
-                <a className="flex items-center space-x-1 text-[#181717] hover:text-[#3AA6B9] text-sm sm:text-base md:text-lg lg:text-xl"
-                href="https://github.com/Obersan6"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <i className="fab fa-github text-xl sm:text-2xl md:text-3xl"></i>
-    <span>GitHub</span>
-    </a>
-              </div>
-
-
-                {/* Brand Name */}
-                {/* <a
-                    href="#home"
-                    className={`font-['Sacramento'] text-[#3AA6B9] hover:text-[#27464a] font-bold transition-colors duration-300 nav-link ${
-                    isShrunk ? 'text-[40px]' : 'text-[60px]'}`}
-                >                
-                    Olga Bernal
-                </a> */}
-                <a href="#home" className={`font-['Sacramento'] text-[#3AA6B9] hover:text-[#27464a] font-bold transition-colors duration-300 nav-link ${
-                isShrunk
-                  ? 'text-2xl sm:text-3xl md:text-4xl'
-                  : 'text-4xl sm:text-5xl md:text-6xl'
+        {/* Navigation Links */}
+        <ul
+          className={`mt-4 space-y-2 md:space-y-0 md:space-x-8 md:flex justify-center ${
+            isOpen ? 'flex flex-col items-center' : 'hidden'
+          } md:flex`}
+        >
+          {['about', 'skills', 'projects', 'contact'].map((id) => (
+            <li key={id}>
+              <a
+                href={`#${id}`}
+                className={`font-['Comfortaa'] text-[#3AA6B9] hover:text-[#27374a] font-bold transition-colors duration-300 nav-link ${
+                  isShrunk
+                    ? 'text-base sm:text-lg md:text-xl'
+                    : 'text-lg sm:text-xl md:text-2xl'
                 }`}
-                >
-                  Olga Bernal
-                </a>
-
-                {/* Hamburger Menu Button (Visible on Small Screens) */}
-                <div className="md:hidden mt-4">
-                    <button
-                      onClick={() => setIsOpen(!isOpen)}
-                      className="text-[#3AA6B9]
-                      focus:outline-none"
-                      aria-label="Toggle navigation"
-                    >
-                    
-                    {/* Hamburger Icon */}
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      {isOpen ? (
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                      ) : (
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                      )}
-                    </svg>
-                    </button>
-                </div>
-
-                
-                {/* Navigation Links */}
-                <ul className={`mt-4 space-y-2 md:space-y-0 md:space-x-8 md:flex ${isOpen ? 'flex flex-col items-center' : 'hidden'} md:flex`}
-            >
-                  <li>
-                    {/* <a href="#about" className={`font-['Comfortaa'] text-[#3AA6B9] hover:text-[#27374a] font-bold transition-colors duration 300 nav-link ${isShrunk ? 'text-[20px]' : 'text-[25px]'}`}>
-                      About
-                    </a> */}
-                    <a href="#about" className={`font-['Comfortaa'] text-[#3AA6B9] hover:text-[#27374a] font-bold transition-colors duration-300 nav-link ${
-                      isShrunk  
-                        ? 'text-base sm:text-lg md:text-xl'
-                        : 'text-lg sm:text-xl md:text-2xl'
-                    }`}
-                    >
-                      About
-                    </a>
-                  </li>
-                  <li>
-                    {/* <a href="#skills" className={`font-['Comfortaa'] text-[#3AA6B9] hover:text-[#27374a] font-bold transition-colors duration 300 nav-link ${isShrunk ? 'text-[20px]' : 'text-[25px]'}`}>
-                      Skills
-                    </a> */}
-
-                    <a href="#skills" className={`font-['Comfortaa'] text-[#3AA6B9] hover:text-[#27374a] font-bold transition-colors duration 300 nav-link ${
-    isShrunk
-      ? 'text-base sm:text-lg md:text-xl'
-      : 'text-lg sm:text-xl md:text-2xl'
-  }`}
-                    >
-                      Skills
-                    </a>
-                  </li>
-                  <li>
-                    {/* <a href="#projects" className={`font-['Comfortaa'] text-[#3AA6B9] hover:text-[#27374a] transition-colors font-bold duration 300 nav-link ${isShrunk ? 'text-[20px]' : 'text-[25px]'}`}>
-                      Projects
-                    </a> */}
-
-                    <a href="#projects" className={`font-['Comfortaa'] text-[#3AA6B9] hover:text-[#27374a] transition-colors font-bold duration 300 nav-link ${
-                      isShrunk
-                        ? 'text-base sm:text-lg md:text-xl'
-                        : 'text-lg sm:text-xl md:text-2xl'
-                    }`}
-                    >
-                      Projects
-                    </a>
-                  </li>
-                  <li>
-                    {/* <a href="#contact" className={`font-['Comfortaa'] text-[#3AA6B9] hover:text-[#27374a] transition-colors font-bold duration 300 nav-link ${isShrunk ? 'text-[20px]' : 'text-[25px]'}`}>
-                      Contact
-                    </a> */}
-
-                    <a href="#contact" className={`font-['Comfortaa'] text-[#3AA6B9] hover:text-[#27374a] transition-colors font-bold duration 300 nav-link ${
-                      isShrunk
-                       ? 'text-base sm:text-lg md:text-xl'
-                       : 'text-lg sm:text-xl md:text-2xl'
-                    }`}
-                    >
-                      Contact
-                    </a>
-                  </li>
-                </ul>               
-            </div>
-        </nav>
-    )
+              >
+                {id.charAt(0).toUpperCase() + id.slice(1)}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </nav>
+  );
 }
-
 
 export default Navbar;
