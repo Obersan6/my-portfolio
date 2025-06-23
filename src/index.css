@@ -28,3 +28,18 @@ body {
 .contact-button:hover {
     background-color:#097b8d;
 }
+
+@media (max-width: 600px) {
+  .text-xs-custom {
+    font-size: 0.85rem; 
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .h2-xs {
+    font-size: 1.85rem;
+    line-height: 2.1rem;
+    text-align: center;
+  }
+}

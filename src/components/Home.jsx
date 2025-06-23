@@ -6,13 +6,10 @@ import profilePic from '../assets/olga-img.jpg';
 
 function Home() {
     return (
-        // <section id="home" className="bg-[#EAFDFC] py-16 text-center">
-        //The one below worked for non-responsive
-        // <section id="home" className="bg-[#EAFDFC]  pt-65 md:pt-75 text-center">
         <section
         id="home"
         className="bg-[#EAFDFC] px-4 text-center
-                   mt-[200px] sm:pt-[180px] md:pt-[100px] lg:pt-[80px]"            
+                   mt-[250px] sm:pt-[200px] md:mt-[100px] lg:mt-[80px]"            
         >
             <img
                 src={profilePic}

@@ -10,7 +10,6 @@ function Contact() {
     message: '',
   });
 
-  // THIS was missing
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevData => ({
@@ -20,7 +19,7 @@ function Contact() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();  // FIXED: added parentheses
+    e.preventDefault();
 
     try {
       const response = await fetch("https://formspree.io/f/xkgjlblg", {
@@ -45,18 +44,25 @@ function Contact() {
   };
 
   return (
-    // <section id="contact" className="min-h-screen bg-[#EAFDFC] flex items-center justify-center px-6 py-12">
-    <section id="contact" className="min-h-screen bg-[#EAFDFC] flex items-center justify-center px-6 py-12">
-      <div className="max-w-xl w-full text-center">
-        <h2 className="text-[50px] font-['Montserrat'] text-[#077488] pt-15 pb-25">Get in Touch</h2>
-        {/* <h2 className="text-[40px] font-['italiana'] text-[#077488] mb-6">Get in Touch</h2> */}
+    <section
+      id="contact"
+      className="bg-[#EAFDFC] pt-10 pb-10 flex items-center justify-center px-4 sm:pt-16 sm:pb-32 md:pt-24 md:pb-20"
+    >
+       
+      <div className="w-full max-w-2xl text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-[50px] font-['Montserrat'] text-[#077488] mb-10">
+        Contact
+      </h2>
 
         {submitted ? (
           <p className="text-green-600 text-lg font-['comfortaa']">
             ✅ Thank you! Your message was sent successfully.
           </p>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-4 text-left">
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-6 text-left font-['comfortaa']"
+          >
             <input
               type="text"
               name="name"
@@ -64,7 +70,7 @@ function Contact() {
               onChange={handleChange}
               placeholder="Your name"
               required
-              className="w-full px-4 py-2 border-2 border-[#3AA6B9] rounded-md focus:ring-2 focus:ring-[#3AA6B9] font-['comfortaa']"
+              className="w-full px-4 py-3 border-2 border-[#3AA6B9] rounded-md focus:ring-2 focus:ring-[#3AA6B9]"
             />
             <input
               type="email"
@@ -73,7 +79,7 @@ function Contact() {
               onChange={handleChange}
               placeholder="Your email"
               required
-              className="w-full px-4 py-2 border-2 border-[#3AA6B9] rounded-md focus:ring-2 focus:ring-[#3AA6B9] font-['comfortaa']"
+              className="w-full px-4 py-3 border-2 border-[#3AA6B9] rounded-md focus:ring-2 focus:ring-[#3AA6B9]"
             />
             <textarea
               name="message"
@@ -82,22 +88,24 @@ function Contact() {
               placeholder="Your message"
               rows="5"
               required
-              className="w-full px-4 py-2 border-2 border-[#3AA6B9] rounded-md focus:ring-2 focus:ring-[#3AA6B9] font-['comfortaa']"
+              className="w-full px-4 py-3 border-2 border-[#3AA6B9] rounded-md focus:ring-2 focus:ring-[#3AA6B9]"
             ></textarea>
 
             <button
               type="submit"
-              className="w-full bg-[#3AA6B9] hover:bg-[#27374a] font-['comfortaa'] text-white font-medium py-2 px-4 rounded transition-colors duration-300 contact-button"
+              className="w-full bg-[#3AA6B9] hover:bg-[#27374a] text-white font-medium py-3 px-4 rounded transition-colors duration-300"
             >
               Send Message
             </button>
           </form>
         )}
 
-        {/* Optional backup email */}
-        <p className="text-sm text-gray-500 mt-6 font-['comfortaa'] text-[18px]">
+        <p className="text-sm sm:text-base mt-8 text-gray-600 font-['comfortaa']">
           Prefer email? Reach me directly at{" "}
-          <a href="mailto:your.email@example.com" className="font-['comfortaa'] text-blue-600 hover:text-blue-800">
+          <a
+            href="mailto:obersan6@gmail.com"
+            className="text-blue-600 hover:text-blue-800"
+          >
             obersan6@gmail.com
           </a>
         </p>
@@ -107,6 +115,3 @@ function Contact() {
 }
 
 export default Contact;
-
-
-

@@ -4,13 +4,16 @@ import React from 'react';
 
 function About() {
     return (
-        // <section id="about" className="bg-[#b3e0ee] pt-25 pb-40 text-center">
-        <section id="about" className="bg-[#afe3f2] pt-25 pb-40 text-center">
+        <section id="about" className="bg-[#afe3f2] pt-25 pb-40 text-center sm:mt-[5px] md:mt-[100px] lg:pt-[125px]">
 
-            <h2 className="text-[50px] font-['Montserrat'] text-[#077488]">About Me</h2>
-            {/* <h2 className="text-[50px] font-['raleway-<uniquifier> '] text-[#077488]">About Me</h2> */}
-  
-            <p className="mt-16 text-lg px-6 max-w-6xl mx-auto text-[28px] font-['Comfortaa'] text-[#27464a] leading-relaxed">
+            {/* <h2 className="text-[50px] font-['Montserrat'] text-[#077488] h2-xs">About Me</h2> */}
+            <h2 className="text-[32px] sm:text-[38px] md:text-[44px] lg:text-[50px] font-['Montserrat'] text-[#077488]">About Me</h2>
+
+    
+            <p className="mt-16 text-lg px-6 max-w-6xl mx-auto text-[28px] font-['Comfortaa'] text-[#27464a] leading-relaxed sm:text-[5px] md:text-[15px] lg:text-[28px] text-xs-custom">
+            {/* <p className="mt-16 px-6 mx-auto text-[#27464a] leading-relaxed font-['Comfortaa'] 
+              text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] max-w-5xl"> */}
+
 
             {/* 👋 Hi there!  */}
             <br /> 

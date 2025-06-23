@@ -11,16 +11,37 @@ import deckOfCards from '../assets/deck-of-cards-img.jpeg';
 
 function Projects() {
     return (
-        // <section id="projects" className="bg-[#b3e0ee] py-16 text-center">
-        // <section id="projects" className="bg-[#afe3f2] py-16 text-center">
-        <section id="projects" className="bg-[#afe3f2] pt-25 pb-40 text-center">
-            <h2 className="text-[50px] font-['Montserrat'] text-[#077488]">Projects</h2>
-            {/* <h2 className="text-[50px] font-['italiana'] text-[#077488]">Projects</h2> */}
+      // <section id="projects" className="bg-[#b3e0ee] py-16 text-center">
+      // <section id="projects" className="bg-[#afe3f2] py-16 text-center">
+      // <section id="projects" className="bg-[#afe3f2] pt-25 pb-40 text-center">
+      // <section id="projects" className="bg-[#afe3f2] pt-10 pb-0 sm:pt-14 md:pt-20 text-center">
+<section
+  id="projects"
+  className="bg-[#afe3f2] pt-10 pb-10 sm:pt-14 md:pt-16 lg:pt-20 text-center"
+>
 
+
+
+          {/* <h2 className="text-2xl sm:text-4xl md:text-[50px] font-['Montserrat'] text-[#077488] mb-2 sm:mb-6">Projects</h2> */}
+          {/* <h2 className="text-2xl sm:text-4xl md:text-[50px] font-['Montserrat'] text-[#077488] mb-10">Projects</h2> */}
+            <h2 className="text-2xl sm:text-3xl md:text-[50px] font-['Montserrat'] text-[#077488] mb-8 sm:mb-10 md:mb-14">
+  Projects
+</h2>
+
+
+
+          {/* <h2 className="text-[50px] font-['Montserrat'] text-[#077488]">Projects</h2> */}
+          {/* <h2 className="text-[50px] font-['italiana'] text-[#077488]">Projects</h2> */}
+           
             {/* Main Projects */}
             <div className="space-y-16 mb-20">
+              
               {/* Center each featured project */}
-              <div className="flex justify-center mt-30 mb-14">
+              {/* <div className="flex justify-center mt-30 mb-14"> */}
+              {/* <div className="flex justify-center mt-6 sm:mt-10 md:mb-14"> */}
+              <div className="flex justify-center mt-0 mb-14">
+
+               
                 <ProjectCard
                   title="PsychoDiagnose"
                   description={

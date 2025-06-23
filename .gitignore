@@ -25,6 +25,7 @@ dist-ssr
 
 # Docs
 docs/borrador.md
+borrador.jsx
 
 # Drafts
 src/borrador.jsx
